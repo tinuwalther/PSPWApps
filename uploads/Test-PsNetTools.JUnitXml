@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<testsuites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="junit_schema_4.xsd" name="Pester" tests="6" errors="0" failures="2" disabled="1" time="0.106">
+  <testsuite name="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" tests="6" errors="0" failures="2" hostname="AT40845" id="0" skipped="0" disabled="1" package="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" time="0.106">
+    <properties>
+      <property name="junit-version" value="4" />
+      <property name="machine-name" value="AT40845" />
+      <property name="user-domain" value="AT40845" />
+      <property name="os-version" value="10.0.22000" />
+      <property name="cwd" value="D:\github.com\PrivateStuff\PesterReport" />
+      <property name="user" value="tinu" />
+      <property name="platform" value="Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk0\Partition3" />
+      <property name="clr-version" value="Unknown" />
+    </properties>
+    <testcase name="Test PsNetTools.[NEG] Test-PsNetDig should return true" status="Failed" classname="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" assertions="0" time="0.013">
+      <failure message="Expected $true, but got $false.&#xD;&#xA;at (Test-PsNetDig 'sbb.ch').Succeeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:11">at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:11</failure>
+    </testcase>
+    <testcase name="Test PsNetTools.[POS] Test-PsNetDig should return a PSCustomObject" status="Passed" classname="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Test PsNetTools.[NEG] Test-PsNetTping should return true" status="Failed" classname="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" assertions="0" time="0.011">
+      <failure message="Expected $true, but got $false.&#xD;&#xA;at (Test-PsNetTping -Destination 'sbb.ch' -CommonTcpPort HTTPS ).TcpSucceeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:26">at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:26</failure>
+    </testcase>
+    <testcase name="Test PsNetTools.[POS] Test-PsNetUping should return true" status="Passed" classname="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Test PsNetTools.[POS] Test-PsNetWping should return true" status="Passed" classname="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" assertions="0" time="0.007" />
+  </testsuite>
+</testsuites>
