@@ -1,6 +1,6 @@
 Add-PodeWebPage -Group 'MongoDB' -Name 'MDBC InventoryDB' -Title 'MongoDB CRUD operations' -Icon 'database' -ScriptBlock {
     
-    Import-Module .\functions\docker.psm1  -Force
+    Import-Module .\bin\docker.psm1  -Force
 
     $IsRunning = Test-IsDockerRunning
     if($IsRunning){
@@ -12,7 +12,7 @@ Add-PodeWebPage -Group 'MongoDB' -Name 'MDBC InventoryDB' -Title 'MongoDB CRUD o
 
                 New-PodeWebBellow -Name 'Create - Add new document' -Content @(
                     New-PodeWebForm -Id 1 -Name 'Add new document' -ScriptBlock {
-                        Import-Module .\functions\mongodb.psm1 -Force
+                        Import-Module .\bin\mongodb.psm1 -Force
                         $mongo_col = Initialize-MongoDB
                         
                         $document1 = @{
@@ -50,7 +50,7 @@ Add-PodeWebPage -Group 'MongoDB' -Name 'MDBC InventoryDB' -Title 'MongoDB CRUD o
 
                 New-PodeWebBellow -Name "Read - List all documents" -Content @(
                     New-PodeWebTable -Id 2 -Name 'List all documents' -SimpleSort -SimpleFilter -ScriptBlock {
-                        Import-Module .\functions\mongodb.psm1 -Force
+                        Import-Module .\bin\mongodb.psm1 -Force
                         $mongo_col = Initialize-MongoDB
                         Get-MongoDBData -Collection $mongo_col
                     }
@@ -58,7 +58,7 @@ Add-PodeWebPage -Group 'MongoDB' -Name 'MDBC InventoryDB' -Title 'MongoDB CRUD o
 
                 New-PodeWebBellow -Name 'Update - Update one document' -Content @(
                     New-PodeWebForm -Id 3 -Name 'Update one document' -ScriptBlock {
-                        Import-Module .\functions\mongodb.psm1 -Force
+                        Import-Module .\bin\mongodb.psm1 -Force
                         $mongo_col = Initialize-MongoDB
 
                         $filter_json3 = @{ID = $WebEvent.Data.ID}
@@ -97,7 +97,7 @@ Add-PodeWebPage -Group 'MongoDB' -Name 'MDBC InventoryDB' -Title 'MongoDB CRUD o
 
                 New-PodeWebBellow -Name 'Delete - Remove one document' -Content @(
                     New-PodeWebForm -Id 4 -Name "Remove document" -ScriptBlock {
-                        Import-Module .\functions\mongodb.psm1 -Force
+                        Import-Module .\bin\mongodb.psm1 -Force
                         $mongo_col = Initialize-MongoDB
 
                         $filter_json4 = @{ID = $WebEvent.Data.ID} 

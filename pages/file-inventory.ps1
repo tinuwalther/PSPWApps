@@ -4,7 +4,7 @@
             
         $array = @()
         $array += 'Choose...'
-        $FilePath = Join-Path (Get-Item $PSScriptRoot).Parent -ChildPath 'uploads'
+        $FilePath = Join-Path (Get-Item $PSScriptRoot).Parent -ChildPath 'data'
         $array += (Get-ChildItem $FilePath).Name
         
         New-PodeWebSelect -Name 'File' -Options $array |

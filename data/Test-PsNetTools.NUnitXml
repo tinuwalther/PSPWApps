@@ -4,23 +4,23 @@
   <culture-info current-culture="de-CH" current-uiculture="en-GB" />
   <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="0.0989" asserts="0" description="Pester">
     <results>
-      <test-suite type="TestFixture" name="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1" executed="True" result="Failure" success="False" time="0.0989" asserts="0" description="D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1">
+      <test-suite type="TestFixture" name="D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1" executed="True" result="Failure" success="False" time="0.0989" asserts="0" description="D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1">
         <results>
           <test-suite type="TestFixture" name="Test PsNetTools" executed="True" result="Failure" success="False" time="0.0664" asserts="0" description="Test PsNetTools">
             <results>
               <test-case description="[NEG] Test-PsNetDig should return true" name="Test PsNetTools.[NEG] Test-PsNetDig should return true" time="0.0103" asserts="0" success="False" result="Failure" executed="True">
                 <failure>
                   <message>Expected $true, but got $false.
-at (Test-PsNetDig 'sbb.ch').Succeeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:11</message>
-                  <stack-trace>at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:11</stack-trace>
+at (Test-PsNetDig 'sbb.ch').Succeeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1:11</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1:11</stack-trace>
                 </failure>
               </test-case>
               <test-case description="[POS] Test-PsNetDig should return a PSCustomObject" name="Test PsNetTools.[POS] Test-PsNetDig should return a PSCustomObject" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
               <test-case description="[NEG] Test-PsNetTping should return true" name="Test PsNetTools.[NEG] Test-PsNetTping should return true" time="0.0143" asserts="0" success="False" result="Failure" executed="True">
                 <failure>
                   <message>Expected $true, but got $false.
-at (Test-PsNetTping -Destination 'sbb.ch' -CommonTcpPort HTTPS ).TcpSucceeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:26</message>
-                  <stack-trace>at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\functions\New-PesterResult.Tests.ps1:26</stack-trace>
+at (Test-PsNetTping -Destination 'sbb.ch' -CommonTcpPort HTTPS ).TcpSucceeded | Should -BeTrue, D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1:26</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, D:\github.com\PrivateStuff\PesterReport\bin\New-PesterResult.Tests.ps1:26</stack-trace>
                 </failure>
               </test-case>
               <test-case description="[POS] Test-PsNetUping should return true" name="Test PsNetTools.[POS] Test-PsNetUping should return true" time="0.0041" asserts="0" success="True" result="Success" executed="True" />

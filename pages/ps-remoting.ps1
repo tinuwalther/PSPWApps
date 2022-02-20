@@ -24,14 +24,14 @@ Add-PodeWebPage -Name 'PowerShell Remoting' -Title 'WinRM is SSH for Windows!' -
     New-PodeWebCard -Name "System Events of the last $Days days" -Content @(
         New-PodeWebForm -ArgumentList $Days -Name "Remote Computer" -ScriptBlock {
             param($Days)
-            $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\functions\eventlog.psm1"
+            $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\bin\eventlog.psm1"
             Import-Module -FullyQualifiedName $Module -Force
 
             if([String]::IsNullOrEmpty($WebEvent.Data.Computer)){
                 $SystemLogs = Get-SystemLogs -Days $Days -EventID @(13,26,41,42,107,109,161,1001,1074,1076,2004,6005,6006,6008,7022,7031,7043)   
                 Out-PodeWebTable -Data $SystemLogs -Sort
             }else{
-                $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\functions\remote.psm1"
+                $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\bin\remote.psm1"
                 Import-Module -FullyQualifiedName $Module -Force
                 $Properties = @{
                     RemoteComputer = $($WebEvent.Data.Computer)
@@ -61,7 +61,7 @@ Add-PodeWebPage -Name 'PowerShell Remoting' -Title 'WinRM is SSH for Windows!' -
     New-PodeWebCard -Name "Application Crashes of the last $Days days" -Content @(
         New-PodeWebTable -ArgumentList $Days -Name 'ApplicationReport' -SimpleSort -SimpleFilter -ScriptBlock {
             param($Days)
-            $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\functions\eventlog.psm1"
+            $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\bin\eventlog.psm1"
             Import-Module -FullyQualifiedName $Module -Force
             Get-ApplicationLogs -Days $Days -EventID @(1000,1002,1026)
         }

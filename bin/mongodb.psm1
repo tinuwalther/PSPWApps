@@ -145,8 +145,8 @@ function Remove-MongoDBDocument {
 }
 
 <#
-    Import-Module .\functions\docker.psm1 -Force
-    Import-Module .\functions\mongodb.psm1 -Force
+    Import-Module .\bin\docker.psm1 -Force
+    Import-Module .\bin\mongodb.psm1 -Force
 
     $IsRunning = Test-IsDockerRunning
 

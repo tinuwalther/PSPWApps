@@ -1,10 +1,10 @@
 ﻿Add-PodeWebPage -Name 'Pester Reporting' -Title 'Read Pester Tests' -Icon 'file' -ScriptBlock {
 
-    $FilePath = Join-Path (Get-Item $PSScriptRoot).Parent -ChildPath 'uploads'
+    $FilePath = Join-Path (Get-Item $PSScriptRoot).Parent -ChildPath 'data'
     $array = @()
     $array += (Get-ChildItem $FilePath -Filter '*.*UnitXml').FullName
 
-    $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\functions\Read-FromXML.psm1"
+    $Module = Join-PodeWebPath -Path $($PSScriptRoot).Trim('pages') -ChildPath "\bin\Read-FromXML.psm1"
     Import-Module -FullyQualifiedName $Module -Force
 
     foreach($item in $array){
